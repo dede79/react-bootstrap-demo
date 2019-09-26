@@ -1,14 +1,80 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Oxygen', "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.main{
+  min-height:300px;
+  margin-bottom: 30px;
+}
+
+.jumbo__container{
+  position:relative;
+  text-align:center;
+  margin:0 auto;
+}
+
+@media all and (min-width:767.98px){
+  .jumbo__container {
+    max-width: 50%;
+  }
+}
+
+.jumbo__container:before {
+  content: '{';
+  left: 0;
+}
+.jumbo__container:after {
+  content: '}';
+  right: 0;
+}
+.jumbo__container:after, .jumbo__container:before {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+@media all and (min-width:767.98px){
+  .jumbo__container:after, .jumbo__container:before {
+    -webkit-animation-name: opacity;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    animation-name: opacity;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+footer{
+  position:absolute;
+  width: 100%;
+  height:50px;
+  background-color: #61133ed6;
+  color:white;
+  padding-top:14px;
+  
 }

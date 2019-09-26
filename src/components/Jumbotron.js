@@ -1,14 +1,15 @@
 import React from 'react';
 import { Jumbotron as Jumbo, Container } from 'react-bootstrap';
 import styled from 'styled-components';
-import boatImage from '../assets/boatImage.jpg';
+import HeroNew from '../assets/HeroNew.jpg';
+
 
 const Styles = styled.div`
   .jumbo {
-    background: url(${boatImage}) no-repeat fixed bottom;
+    background: url(${HeroNew}) no-repeat fixed top;
     background-size: cover;
     color: #efefef;
-    height: 200px;
+    height: 400px;
     position: relative;
     z-index: -2;
   }
@@ -27,11 +28,11 @@ const Styles = styled.div`
 
 export const Jumbotron = () => (
   <Styles>
-    <Jumbo fluid className="jumbo">
+    <Jumbo fluid className="jumbo d-flex align-items-center">
       <div className="overlay"></div>
       <Container>
-        <h1>Welcome</h1>
-        <p>Learn to code from my YouTube videos</p>
+        <h1 className="jumbo__container">Hello! I'm Andrea</h1>
+        
       </Container>
     </Jumbo>
   </Styles>
